@@ -30,7 +30,7 @@ The included `index.js` demonstrates a sample interaction with a pet named "Bell
 
 1. Ensure you have Node.js installed (version 14 or higher recommended).
 2. Clone or download the project files.
-3. Open a terminal in the project directory (`digital-pet`).
+3. Open a terminal in the project directory (`mlh-digital-pet`).
 4. Run the app with:
    ```
    node index.js
