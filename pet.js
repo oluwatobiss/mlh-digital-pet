@@ -28,7 +28,7 @@ class Pet {
   // Get current mood status of the pet
   getStatus() {
     let mood = "neutral";
-    this.happiness > 70 && this.happiness < 100 && (mood = "delighted");
+    this.happiness > 70 && this.happiness <= 100 && (mood = "delighted");
     this.happiness < 30 && (mood = "sad");
     this.happiness > 100 && (mood = "angry");
     this.hunger > 70 && (mood = "hungry");
