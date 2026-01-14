@@ -20,6 +20,7 @@ A simple digital pet simulator built with JavaScript and Node.js. Care for your 
 3. **Monitor Status**: Use `getStatus()` to view your pet's mood, which is determined by happiness and hunger levels:
    - Delighted: Happiness > 70
    - Sad: Happiness < 30
+   - Angry: Happiness > 100
    - Hungry: Hunger > 70
    - Neutral: Otherwise
 4. **Goal**: Keep your pet happy and fed! If hunger reaches 100 or happiness reaches 0, your pet may become unhappy.

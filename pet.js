@@ -2,13 +2,13 @@ class Pet {
   constructor(name) {
     this.name = name;
     this.hunger = 0; // 0 = full, 100 = starving
-    this.happiness = 100; // 0 = sad, 100 = delighted
+    this.happiness = 100; // 0 = sad, 100 = delighted, > 100 = angry
   }
 
   // Feed pet to reduce hunger and increase happiness
   feed() {
     this.hunger = Math.max(0, this.hunger - 20); // Set hunger to the larger of 0 or current hunger - 20 (i.e., decrease hunger)
-    this.happiness = Math.min(100, this.happiness + 10); // Set happiness to the smaller of 100 or current happiness + 10 (i.e., increase happiness)
+    this.happiness = this.happiness + 10; // Set happiness to current happiness + 10 (i.e., increase happiness)
     console.log(`${this.name} has been fed!`);
   }
 
@@ -28,8 +28,9 @@ class Pet {
   // Get current mood status of the pet
   getStatus() {
     let mood = "neutral";
-    this.happiness > 70 && (mood = "delighted");
+    this.happiness > 70 && this.happiness < 100 && (mood = "delighted");
     this.happiness < 30 && (mood = "sad");
+    this.happiness > 100 && (mood = "angry");
     this.hunger > 70 && (mood = "hungry");
     return `${this.name} is ${mood}. Hunger: ${this.hunger}/100, Happiness: ${this.happiness}/100`;
   }
